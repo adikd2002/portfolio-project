@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -47,15 +48,15 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Adithya</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Adithya</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           <a class="nav-item nav-link" href="#">Linkedin</a>
-          <a class="nav-item nav-link" href="#">Resume</a>
-          <a class="nav-item nav-link" href="#">Blog</a>
+          <a class="nav-item nav-link" href="{% static 'Adithya Rupanagudi.doc' %}">Resume</a>
+          <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
 
         </div>
       </div>
@@ -70,8 +71,8 @@
       <p class="lead text-muted">This is my first Website. Will try to host it</p>
       <p>
         <a href="mailto:adikd2002@gmail.com" class="btn btn-primary my-2">Email Me</a>
-
       </p>
+      <img src="{% static '177981_10151047518867053_1601671270_o(1).jpg' %}" height="200" width="200"/>
     </div>
   </section>
 
